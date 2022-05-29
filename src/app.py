@@ -23,18 +23,4 @@ def video():
     return Response(gen(Video()),
     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-
-# @app.route('/videoone')
-
-# def videotwo():
-#     return Response(gen(Videoone()),
-#     mimetype='multipart/x-mixed-replace; boundary=frame')
-
-
-# @app.route('/videotwo')
-
-# def videotwo():
-#     return Response(gen(Videotwo()),
-#     mimetype='multipart/x-mixed-replace; boundary=frame')
-
 app.run(debug=True)
