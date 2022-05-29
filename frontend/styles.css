@@ -1,0 +1,586 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+.cont {
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
+/* From uiverse.io by @gagan-gv */
+/* From uiverse.io */
+
+.star {
+  position: fixed;
+  left: 100%;
+  top: 100%;
+  height: 1.6px;
+  border-radius: 10000rem;
+  background: linear-gradient(-45deg, #eef0f5, rgba(0, 18, 99, 0.747));
+
+  -webkit-filter: drop-shadow(0 0 6px #eef1f8);
+  filter: drop-shadow(0 0 6px #d7dff0);
+  -webkit-animation: tail 3000ms ease-in-out infinite,
+    shooting 3000ms ease-in-out infinite;
+  animation: tail 3000ms ease-in-out infinite,
+    shooting 3000ms ease-in-out infinite;
+}
+
+/* Here we add before and after effect to star */
+.star::before,
+.star::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 255, 0),
+    #eaeef8,
+    rgba(0, 0, 255, 0)
+  );
+  -webkit-transform: translateX(50%) rotateZ(45deg);
+  transform: translateX(50%) rotateZ(45deg);
+  border-radius: 100%;
+  -webkit-animation: shining 3000ms ease-in-out infinite;
+  animation: shining 3000ms ease-in-out infinite;
+}
+.star::after {
+  -webkit-transform: translateX(50%) rotateZ(-45deg);
+  transform: translateX(50%) rotateZ(-45deg);
+}
+.dot {
+  width: 2px;
+  height: 2px;
+  position: relative;
+  background-color: #c46a52;
+  box-shadow: 0px 0px 10px 2px #7803d8;
+  border-radius: 0px;
+  z-index: 1;
+}
+
+#container {
+  width: 90%;
+  height: 0;
+}
+
+/* Here we are adding location of each 
+   nth-child, animations, delays, and 
+   before and after effects to each 
+   and every balls(stars) */
+.star:nth-child(1) {
+  top: calc(50% - -119px);
+  left: calc(50% - 43px);
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(1)::before,
+.star:nth-child(1)::after {
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(2) {
+  top: calc(50% - -43px);
+  left: calc(50% - 37px);
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 5000ms;
+}
+.star:nth-child(2)::before,
+.star:nth-child(2)::after {
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 5000ms;
+}
+.star:nth-child(3) {
+  top: calc(50% - -40px);
+  left: calc(50% - 222px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(3)::before,
+.star:nth-child(3)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(4) {
+  top: calc(50% - -29px);
+  left: calc(50% - 113px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(4)::before,
+.star:nth-child(4)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(5) {
+  top: calc(50% - 146px);
+  left: calc(50% - 112px);
+  -webkit-animation-delay: 3000ms;
+  animation-delay: 3000ms;
+}
+.star:nth-child(5)::before,
+.star:nth-child(5)::after {
+  -webkit-animation-delay: 3000ms;
+  animation-delay: 3000ms;
+}
+.star:nth-child(6) {
+  top: calc(50% - -108px);
+  left: calc(50% - 160px);
+  -webkit-animation-delay: 3000ms;
+  animation-delay: 3000ms;
+}
+.star:nth-child(6)::before,
+.star:nth-child(6)::after {
+  -webkit-animation-delay: 3000ms;
+  animation-delay: 3000ms;
+}
+.star:nth-child(7) {
+  top: calc(50% - 52px);
+  left: calc(50% - 72px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(7)::before,
+.star:nth-child(7)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+
+/* This code will help to generate 
+effect in tail of star */
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 100px;
+  }
+  100% {
+    width: 0;
+  }
+}
+/* This code will help to customize 
+the text */
+
+.add {
+  position: absolute;
+  z-index: 5;
+  margin-left: 45em;
+  left: 0;
+  right: 0;
+  top: 7em;
+  bottom: 0;
+}
+
+.new {
+  position: absolute;
+  z-index: 5;
+  margin-left: 7em;
+  left: 0;
+  right: 0;
+  top: 18em;
+  bottom: 0;
+}
+
+p1 {
+  color: rgb(244, 242, 247);
+  font-size: 19px;
+}
+
+p2 {
+  color: rgb(244, 242, 247);
+  font-size: 30px;
+}
+/* This code will generate shining 
+effect in head of star */
+@keyframes shining {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 30px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Here we are adding webkit-animation 
+to head of star for shining */
+@-webkit-keyframes shining {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 30px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Here we are adding webkit-animation 
+to tail of star */
+@-webkit-keyframes tail {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 100px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Here we are adding webkit-animation 
+for shooting effect */
+@-webkit-keyframes shooting {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(270px);
+    transform: translateX(270px);
+  }
+}
+
+/* Here we make shooting effect */
+@keyframes shooting {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(270px);
+    transform: translateX(270px);
+  }
+}
+
+.animate__animated.animate__bounceInDown {
+  --animate-duration: 5s;
+}
+
+#element {
+  width: 5em;
+  height: 17rem;
+  position: absolute;
+  margin-left: 48em;
+  left: 0;
+  right: 0;
+  top: 6em;
+  bottom: 0;
+  z-index: -1;
+}
+#myVideo {
+  width: 60em;
+  height: 60rem;
+  position: absolute;
+  margin-left: -5em;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.context {
+  width: 100%;
+  position: absolute;
+  top: 50vh;
+}
+
+.context h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+.area {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100vh;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 5s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 5s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 5s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 6s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 12s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 7s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 5s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+/* From uiverse.io */
+.btn1 {
+  position: relative;
+  z-index: 5;
+  margin-left: 7em;
+  left: 50em;
+  right: 0;
+  top: 22em;
+  bottom: 0;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+}
+
+.btn1:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  background-color: #c46a52;
+}
+
+.btn1:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn1::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn1::after {
+  background-color: #fff;
+}
+
+.btn1:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn2 {
+  position: relative;
+  z-index: 5;
+  margin-left: 7em;
+  left: 26.6em;
+  right: 0;
+  top: 27em;
+  bottom: 0;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+}
+
+.btn2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  background-color: #c46a52;
+}
+
+.btn2:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn2::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn2::after {
+  background-color: #fff;
+}
+
+.btn2:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn3 {
+  position: relative;
+  z-index: 5;
+  margin-left: 7em;
+  left: 1.5em;
+  right: 0;
+  top: 32em;
+  bottom: 0;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+}
+
+.btn3:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  background-color: #c46a52;
+}
+
+.btn3:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn3::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn3::after {
+  background-color: #fff;
+}
+
+.btn3:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
