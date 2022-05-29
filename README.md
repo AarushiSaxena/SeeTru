@@ -28,8 +28,7 @@ The model is trained on the `FER-2013 dataset` which was published on Internat
 
 • If you want to train this model, use:
 
-`cd src`
-                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+`cd src`                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 `python emotions.py --mode train`
 
 • If you want to view the predictions without training again, you can download the pre-trained model from here and then run:
