@@ -12,16 +12,6 @@ import threading
 from socket import socket
 import pyttsx3
 import subprocess
-# from fps import FPS
-
-
-
-# def speak(text):#this defines the function SPEAK and creates the command for its use
-
-
-
-# chdir("../src/data")
-# playsound("sound.wav")
 
 # Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
@@ -84,20 +74,14 @@ while True:
                 labels[str(result)], (280, 400), font, 1, (0, 255, 0), 2, cv2.LINE_AA)
     
     speak("The value is" + labels[str(result)])
-    # engine.say("The value is" + labels[str(result)])
-    # t1 = threading.Thread(target=pianoF, args=())
-    # t1.start()
-    # t1.join()
+   
 
     # Exit, when 'q' is pressed on the keyboard
     cv2.imshow('Frame', frame)
     if cv2.waitKey(1) and 0xff == ord('q'):
         exit = True
         break
-    # Show the frame   
-    # cv2.imshow('Frame', frame)
-    # fps.update()
-
+   
 
 # fps.stop()
 image.release()
