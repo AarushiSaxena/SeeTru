@@ -3,11 +3,14 @@
 
 SEETRU : Creating Vision without Sight! 
 
+![seetru](https://user-images.githubusercontent.com/77536386/170880487-8bfe6077-909c-4418-8b1b-6db8e0e78371.png)
+
+
 # Project Description
 
 This project aims to classify the emotion on a person's face into one of seven categories, using deep convolutional neural networks. People with visual impairments face difficulties during social interactions. In order to assist them, designed system to identify the expressionS of the confronting person and hence enable a better communication. In this system the blind person uses camera assistance for image acquisition of the person who is interacting with them and by using an audio device the facial emotion is detected and conveyed. 
 
-The model is trained on the FER-2013 dataset which was published on International Conference on Machine Learning (ICML). This dataset consists of 35887 grayscale, 48x48 sized face images with seven emotions - angry, disgusted, fearful, happy, neutral, sad and surprised.
+The model is trained on the `FER-2013 dataset` which was published on International Conference on Machine Learning (ICML). This dataset consists of 35887 grayscale, 48x48 sized face images with seven emotions - angry, disgusted, fearful, happy, neutral, sad and surprised.
 
 # Dependencies
 
@@ -17,32 +20,32 @@ The model is trained on the FER-2013 dataset which was published on Internatio
 
 # Data Preparation and Usage
 
-• In case you are looking to experiment with new datasets, you may have to deal with data in the csv format. I have provided the code I wrote for data preprocessing in the dataset_prepare.py file which can be used for reference.
+• In case you are looking to experiment with new datasets, you may have to deal with data in the csv format. I have provided the code I wrote for data preprocessing in the `dataset_prepare.py` file which can be used for reference.
 
 • Initialize the repository:
 
-cd Emotion-detection
+`cd Emotion-detection`
 
 • If you want to train this model, use:
 
-cd src
+`cd src`
                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-python emotions.py --mode train
+`python emotions.py --mode train`
 
 • If you want to view the predictions without training again, you can download the pre-trained model from here and then run:
 
-cd src   
-python emotions.py --mode display
+`cd src`   
+`python emotions.py --mode display`
 
 # Additonal Features
 
 • If you want to use the object-detection model, run:
 
-python real_time_object_detection.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel
+`python real_time_object_detection.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel`
 
 • If you want to use the denomination-determinor model, run:
 
-python main2.py
+`python main2.py`
 
 
 # Implementation
