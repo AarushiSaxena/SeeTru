@@ -22,8 +22,6 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--mode",help="train/display")
 mode = ap.parse_args().mode
 
-# plots accuracy and loss curves
-
 
 def speak(text):#this defines the function SPEAK and creates the command for its use
         tts = gTTS(text=text, lang="en")
