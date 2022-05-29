@@ -11,7 +11,7 @@ This project aims to classify the emotion on a person's face into one of seven 
 
 • Python 3, OpenCV, Tensorflow, Playsound
 
-• To install the required packages, run pip install -r requirements.txt
+• To install the required packages, run `pip install -r requirements.txt`
 
 # Data Preparation and Usage
 
