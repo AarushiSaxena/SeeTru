@@ -1,7 +1,3 @@
-# To run the script, execute the following commands
-# workon cv
-# python3 real_time_object_detection.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel
-
 # import the necessary packages
 from imutils.video import VideoStream
 from imutils.video import FPS
@@ -17,8 +13,6 @@ import pygame
 import threading
 
 
-# def speak(text):#this defines the function SPEAK and creates the command for its use
-#this defines the function SPEAK and creates the command for its use
 tts = gTTS(text="There is an Object", lang="en")
 filename = "voice.mp3"
 tts.save(filename)
@@ -92,9 +86,7 @@ while True:
 			t1 = threading.Thread(target=pianoF, args=())
 			t1.start()
 			t1.join()
-			# speak("The value is" + label)
-			#check if point is in the first box
-
+			
 
 	# show the output frame
 	cv2.imshow("Frame", frame)
